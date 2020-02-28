@@ -31,9 +31,12 @@ http.createServer(function (req, res) {
     console.log(req.headers);
 
     req.on('data', function (chunk) {
+        console.log(1)
         body.push(chunk);
     });
     req.on('end', function () {
+        console.log(2)
+
         body = Buffer.concat(body);
         // console.dir(body)
         // console.log(body.toString());
@@ -44,6 +47,8 @@ http.createServer(function (req, res) {
         let endIndex=data.findIndex(item=>{
             return item=='<i class="end" style="display:none"></i>'
         })
+        console.log(3)
+
 
 
         // 删除之前的组件
