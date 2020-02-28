@@ -26,7 +26,7 @@ http.createServer(function (req, res) {
     res.write('恭喜你拿到数据了')
     res.end(str);
     var body = [];
-
+    console.log('加一句话，看能不能同步过去')
     console.log(req.method);
     console.log(req.headers);
 
