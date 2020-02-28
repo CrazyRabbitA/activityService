@@ -81,6 +81,7 @@ http.createServer(function (req, res) {
             app.listen(8006);
             console.log('http://127.0.0.1:8006');
         })
+        res.end()
 
 
 
